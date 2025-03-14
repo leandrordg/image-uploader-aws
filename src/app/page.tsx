@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Homepage() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
+    <main className="min-h-dvh flex items-center justify-center">
       <div className="bg-pattern" />
 
       <motion.div
