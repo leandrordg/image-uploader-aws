@@ -90,7 +90,7 @@ export default function HomePage() {
 
         <Link href="/get-started">
           <motion.button
-            className="w-full max-w-sm px-8 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-lg shadow-lg font-semibold cursor-pointer select-none"
+            className="w-full max-w-sm px-8 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-xl shadow-sm font-semibold cursor-pointer select-none"
             whileHover={{
               scale: 1.05,
               background: "linear-gradient(to right, #4CAF50, #2196F3)",

@@ -51,11 +51,11 @@ export default function GetStartedPage() {
         className="absolute bottom-0 left-0 right-0 text-center text-xs text-muted-foreground p-4 md:p-8"
       >
         Ao continuar, você concorda com os{" "}
-        <Link href="/terms" className="text-foreground hover:underline">
+        <Link href="#" className="text-foreground hover:underline">
           Termos de Serviço
         </Link>{" "}
         e a{" "}
-        <Link href="/privacy" className="text-foreground hover:underline">
+        <Link href="#" className="text-foreground hover:underline">
           Política de Privacidade
         </Link>{" "}
         da plataforma.
