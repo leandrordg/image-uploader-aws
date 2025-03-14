@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.bg-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ffffff05 1px, transparent 1px),
+    linear-gradient(to bottom, #6b6b6b05 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}
