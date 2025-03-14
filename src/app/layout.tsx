@@ -6,7 +6,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Image Uploader w/AWS S3",
+  title: "Upload de vídeos e imagens | AWS S3",
   description: "Envie a sua imagem para a S3 da AWS e compartilhe o link",
 };
 

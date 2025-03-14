@@ -5,7 +5,7 @@ import Link from "next/link";
 import { GitHub, Instagram, X } from "@/utils/icons";
 import { motion } from "framer-motion";
 
-export default function Homepage() {
+export default function HomePage() {
   return (
     <main className="min-h-dvh flex items-center justify-center">
       <div className="bg-pattern" />
