@@ -7,16 +7,11 @@ import { motion } from "framer-motion";
 
 export default function Homepage() {
   return (
-    <main
-      className="min-h-screen flex items-center justify-center"
-      style={{
-        background: "radial-gradient(circle at center, #0a0a0a, #000000)",
-      }}
-    >
+    <main className="min-h-screen flex items-center justify-center">
       <div className="bg-pattern" />
 
       <motion.div
-        className="relative text-white p-4 md:p-8 space-y-4 text-balance md:text-center"
+        className="relative text-foreground p-4 md:p-8 space-y-4 text-balance md:text-center"
         initial={{ opacity: 0, y: 120 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -32,25 +27,25 @@ export default function Homepage() {
               target="_blank"
               href="https://instagram.com/leandro.rodriguesz"
             >
-              <Instagram className="size-6 fill-zinc-400 hover:fill-white transition-colors duration-200" />
+              <Instagram className="size-6 fill-muted-foreground hover:fill-foreground transition-colors duration-200" />
             </Link>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
             <Link target="_blank" href="https://github.com/leandrordg">
-              <GitHub className="size-6 fill-zinc-400 hover:fill-white transition-colors duration-200" />
+              <GitHub className="size-6 fill-muted-foreground hover:fill-foreground transition-colors duration-200" />
             </Link>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
             <Link target="_blank" href="https://x.com/bertalhiaa">
-              <X className="size-6 fill-zinc-400 hover:fill-white transition-colors duration-200" />
+              <X className="size-6 fill-muted-foreground hover:fill-foreground transition-colors duration-200" />
             </Link>
           </motion.div>
         </motion.div>
 
         <motion.h1
-          className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-tight text-white"
+          className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-tight"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -67,7 +62,7 @@ export default function Homepage() {
         </motion.h1>
 
         <motion.p
-          className="md:text-lg text-zinc-400 max-w-2xl mx-auto"
+          className="md:text-lg max-w-2xl mx-auto text-muted-foreground"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -99,7 +94,7 @@ export default function Homepage() {
         <Link
           target="_blank"
           href="https://github.com/leandrordg"
-          className="text-sm text-zinc-200 hover:underline"
+          className="text-sm hover:underline text-muted-foreground"
         >
           Feito com ❤️ por Leandro Rodrigues.
         </Link>

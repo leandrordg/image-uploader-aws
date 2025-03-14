@@ -1,14 +1,42 @@
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --muted: #c5c5c5;
+  --muted-foreground: #808080;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --muted: #c5c5c5;
+    --muted-foreground: #808080;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
 .bg-pattern {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, #ffffff05 1px, transparent 1px),
-    linear-gradient(to bottom, #6b6b6b05 1px, transparent 1px);
+  background-image: linear-gradient(to right, #c9c9c905 1px, transparent 1px),
+    linear-gradient(to bottom, #4b4b4b05 1px, transparent 1px);
   background-size: 20px 20px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 20;
 }
