@@ -5,6 +5,8 @@
   --foreground: #171717;
   --muted: #c5c5c5;
   --muted-foreground: #808080;
+  --border: #e5e5e5;
+  --border-foreground: #d1d1d1;
 }
 
 @theme inline {
@@ -12,6 +14,8 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-border-foreground: var(--border-foreground);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,23 +24,12 @@
     --foreground: #ededed;
     --muted: #c5c5c5;
     --muted-foreground: #808080;
+    --border: #1d1d1d;
+    --border-foreground: #3a3a3a;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-}
-
-.bg-pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right, #c9c9c905 1px, transparent 1px),
-    linear-gradient(to bottom, #4b4b4b05 1px, transparent 1px);
-  background-size: 20px 20px;
-  pointer-events: none;
-  z-index: 20;
 }

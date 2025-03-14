@@ -8,7 +8,24 @@ import { motion } from "framer-motion";
 export default function HomePage() {
   return (
     <main className="min-h-dvh flex items-center justify-center">
-      <div className="bg-pattern" />
+      <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#c9c9c905_1px,transparent_1px),linear-gradient(to_bottom,#4b4b4b05_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none -z-50" />
+
+      <motion.div
+        className="flex justify-center absolute top-0 left-0 right-0 p-4 md:p-8"
+        initial={{ opacity: 0, x: -40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <div className="p-2 rounded-xl text-center border border-border w-full max-w-xl text-xs md:text-sm text-muted-foreground bg-transparent backdrop-blur-2xl">
+          Atualização: Personalize suas preferências de conta no painel!
+          <Link
+            href="/read-more"
+            className="ml-1 text-cyan-500 hover:underline"
+          >
+            Saiba mais.
+          </Link>
+        </div>
+      </motion.div>
 
       <motion.div
         className="relative text-foreground p-4 md:p-8 space-y-4 text-balance md:text-center"
@@ -71,22 +88,24 @@ export default function HomePage() {
           AWS S3 para um armazenamento confiável e seguro.
         </motion.p>
 
-        <motion.button
-          className="w-full max-w-sm px-8 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-lg shadow-lg font-semibold cursor-pointer"
-          whileHover={{
-            scale: 1.05,
-            background: "linear-gradient(to right, #4CAF50, #2196F3)",
-            transition: { duration: 0.4, ease: "easeInOut" },
-          }}
-          whileTap={{ scale: 0.97 }}
-          transition={{ duration: 0.3 }}
-        >
-          Começar agora
-        </motion.button>
+        <Link href="/get-started">
+          <motion.button
+            className="w-full max-w-sm px-8 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-lg shadow-lg font-semibold cursor-pointer select-none"
+            whileHover={{
+              scale: 1.05,
+              background: "linear-gradient(to right, #4CAF50, #2196F3)",
+              transition: { duration: 0.4, ease: "easeInOut" },
+            }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.3 }}
+          >
+            Começar agora
+          </motion.button>
+        </Link>
       </motion.div>
 
       <motion.div
-        className="absolute bottom-0 left-0 right-0 text-center mb-4 md:mb-8"
+        className="absolute bottom-0 left-0 right-0 text-center p-4 md:p-8"
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
