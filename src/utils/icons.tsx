@@ -50,4 +50,5 @@ const Google = ({ ...rest }: IconProps) => (
   </svg>
 );
 
-export { GitHub, Instagram, X, Google };
+export { GitHub, Google, Instagram, X };
+

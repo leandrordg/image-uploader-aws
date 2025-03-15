@@ -5,13 +5,15 @@ import Link from "next/link";
 import { GitHub, Instagram, X } from "@/utils/icons";
 import { motion } from "framer-motion";
 
+import { ThemeToggle } from "@/components/theme-toggle";
+
 export default function HomePage() {
   return (
     <main className="min-h-dvh flex items-center justify-center">
       <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#c9c9c905_1px,transparent_1px),linear-gradient(to_bottom,#4b4b4b05_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none -z-50" />
 
       <motion.div
-        className="flex justify-center absolute top-0 left-0 right-0 p-4 md:p-8"
+        className="flex items-center justify-center gap-4 absolute top-0 left-0 right-0 p-4 md:p-8"
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -90,7 +92,7 @@ export default function HomePage() {
 
         <Link href="/get-started">
           <motion.button
-            className="w-full max-w-sm px-8 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-xl shadow-sm font-semibold cursor-pointer select-none"
+            className="mt-8 w-full max-w-sm px-8 py-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white rounded-xl shadow-sm font-semibold cursor-pointer select-none"
             whileHover={{
               scale: 1.05,
               background: "linear-gradient(to right, #4CAF50, #2196F3)",
@@ -117,6 +119,15 @@ export default function HomePage() {
         >
           Feito com ❤️ por Leandro Rodrigues.
         </Link>
+      </motion.div>
+
+      <motion.div
+        className="fixed bottom-4 right-4 md:bottom-8 md:right-8"
+        initial={{ opacity: 0, x: -40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <ThemeToggle size="lg" />
       </motion.div>
     </main>
   );

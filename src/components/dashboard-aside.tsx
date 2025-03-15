@@ -12,7 +12,7 @@ export async function DashboardAside() {
   return (
     <section className="flex flex-col items-center text-center gap-4 p-8 border border-border rounded-xl bg-transparent backdrop-blur-2xl">
       <div className="bg-gradient-to-br from-blue-500 to-emerald-500 p-1 rounded-full overflow-clip">
-        <div className="relative size-24 rounded-full overflow-clip">
+        <div className="relative size-24 rounded-full overflow-clip pointer-events-none">
           {session.user.image ? (
             <Image
               src={session.user.image}

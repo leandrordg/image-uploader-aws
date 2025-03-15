@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { AuthForm } from "@/components/auth-form";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { ChevronLeftIcon } from "lucide-react";
 
 export default function GetStartedPage() {
@@ -13,7 +14,7 @@ export default function GetStartedPage() {
       <div className="absolute top-0 h-screen w-screen bg-[radial-gradient(#c9c9c906_1px,#04040405_1px)] bg-[size:20px_20px] -z-50" />
 
       <motion.div
-        className="flex justify-center absolute top-0 left-0 right-0 p-4 md:p-8"
+        className="flex items-center gap-4 justify-center absolute top-0 left-0 right-0 p-4 md:p-8"
         initial={{ opacity: 0, y: -120 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -59,6 +60,15 @@ export default function GetStartedPage() {
           Política de Privacidade
         </Link>{" "}
         da plataforma.
+      </motion.div>
+
+      <motion.div
+        className="fixed bottom-4 right-4 md:bottom-8 md:right-8"
+        initial={{ opacity: 0, x: -40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <ThemeToggle size="lg" />
       </motion.div>
     </main>
   );
