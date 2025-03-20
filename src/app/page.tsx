@@ -20,10 +20,7 @@ export default function HomePage() {
       >
         <div className="p-2 rounded-xl text-center border border-border w-full max-w-xl text-xs md:text-sm text-muted-foreground bg-transparent backdrop-blur-2xl">
           Atualização: Personalize suas preferências de conta no painel!
-          <Link
-            href="/read-more"
-            className="ml-1 text-cyan-500 hover:underline"
-          >
+          <Link href="#" className="ml-1 text-cyan-500 hover:underline">
             Saiba mais.
           </Link>
         </div>
@@ -60,6 +57,10 @@ export default function HomePage() {
             <Link target="_blank" href="https://x.com/bertalhiaa">
               <X className="size-6 fill-muted-foreground hover:fill-foreground transition-colors duration-200" />
             </Link>
+          </motion.div>
+
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+            <ThemeToggle />
           </motion.div>
         </motion.div>
 
@@ -119,15 +120,6 @@ export default function HomePage() {
         >
           Feito com ❤️ por Leandro Rodrigues.
         </Link>
-      </motion.div>
-
-      <motion.div
-        className="fixed bottom-4 right-4 md:bottom-8 md:right-8"
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <ThemeToggle size="lg" />
       </motion.div>
     </main>
   );

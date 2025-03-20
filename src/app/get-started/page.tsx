@@ -36,6 +36,8 @@ export default function GetStartedPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
+        <ThemeToggle />
+
         <h1 className="text-3xl font-bold">Vamos começar!</h1>
 
         <p className="text-muted-foreground mt-4">
@@ -60,15 +62,6 @@ export default function GetStartedPage() {
           Política de Privacidade
         </Link>{" "}
         da plataforma.
-      </motion.div>
-
-      <motion.div
-        className="fixed bottom-4 right-4 md:bottom-8 md:right-8"
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <ThemeToggle size="lg" />
       </motion.div>
     </main>
   );

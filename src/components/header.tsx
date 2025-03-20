@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { SignOutButton } from "@/components/sign-out-button";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Header() {
   return (
@@ -24,6 +25,8 @@ export function Header() {
       </nav>
 
       <div className="flex flex-1 justify-end items-center space-x-4">
+        <ThemeToggle />
+
         <SignOutButton />
       </div>
     </header>
